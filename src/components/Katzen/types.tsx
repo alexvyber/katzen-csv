@@ -1,7 +1,7 @@
 import type { ParseResult } from "papaparse"
 
 // TODO: document type
-export type KatzenType = <_ extends "iternal use only", const Columns extends readonly Column[]>(props: {
+export type KatzenType = <const Columns extends readonly Column[]>(props: {
   columns: Columns
   /**
    * Callback that is being run when data successfully prased
@@ -9,12 +9,13 @@ export type KatzenType = <_ extends "iternal use only", const Columns extends re
   onComplete?: (data: ParseResult<RowEntries<Columns>>) => void
 }) => any
 
+// TODO: decide where type should be conditional
 /**
  * Get row entries types from suplied columns
  */
 type RowEntries<Col> = Col extends readonly Column[]
   ? { [Key in Col[number]["name"]]: string }
-  : { [key: string]: unknown }
+  : { [key: string]: string }
 
 // TODO: document type
 export type Column = {

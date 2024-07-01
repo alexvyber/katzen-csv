@@ -18,6 +18,21 @@ export default function App() {
           data.data[0].first
         }}
       />
+      <Katzen<{ id: string; name: "first" | "second" }[]>
+        columns={[
+          {
+            id: "1",
+            name: "first",
+          },
+          {
+            id: "2",
+            name: "second",
+          },
+        ]}
+        onComplete={(data) => {
+          data.data[0].first
+        }}
+      />
     </div>
   )
 }
