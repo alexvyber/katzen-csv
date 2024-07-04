@@ -1,9 +1,9 @@
 import { Dropzone } from "../Dropzone"
 import { Stepper } from "../Stepper"
-import type { KatzenType } from "./types"
+import type { KatzenComponent } from "./types"
 import { useStepNavigation } from "../Stepper/use-stepper-navigation"
 
-export const Katzen: KatzenType = (_props) => {
+export const Katzen: KatzenComponent = (_props) => {
   const { goNext, goBack, stepper } = useStepNavigation()
 
   return (

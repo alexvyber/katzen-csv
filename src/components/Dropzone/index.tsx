@@ -5,8 +5,6 @@ type Props = Partial<{
   onError: (fileRejections: FileRejection[]) => void
 }>
 
-// TODO: remove and/or rewrite all styles
-
 export function Dropzone({ onSuccess, onError }: Props) {
   const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
     noClick: true,

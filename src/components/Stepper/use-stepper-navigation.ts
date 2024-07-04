@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useStepper } from "./use-stepper"
 import { useLocalStorage } from "../Katzen/use-local-storage"
-import { Step } from "./types"
+import type { Step } from "./types"
 
 const steps: Step[] = [
   { label: "Upload File", id: 0 },
