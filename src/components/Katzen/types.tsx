@@ -2,7 +2,7 @@ import type { ParseResult } from "papaparse"
 
 export type KatzenComponent = <const Columns extends readonly Column[]>(props: {
   /**
-   * Columns config 
+   * Columns config
    */
   columns: Columns
   /**

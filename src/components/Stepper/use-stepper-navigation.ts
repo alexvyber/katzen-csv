@@ -11,7 +11,7 @@ const steps: Step[] = [
 
 export function useStepNavigation(initialStep?: number) {
   const stepper = useStepper(steps, initialStep ?? 0)
-  const [storageStep, setStorageStep] = useLocalStorage("katzen_stepper_step", 1)
+  const [storageStep, setStorageStep] = useLocalStorage("katzen_stepper_step", 0)
 
   const goBack = () => {
     setStep(stepper.current - 1 || 0)

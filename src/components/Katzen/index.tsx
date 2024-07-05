@@ -9,10 +9,10 @@ export const Katzen: KatzenComponent = (_props) => {
   return (
     <div>
       <Stepper {...stepper} />
-      <button onClick={goNext}>+</button>
-      <button onClick={goBack}>-</button>
       <Dropzone
-        onSuccess={(_file) => {}}
+        onSuccess={(_file) => {
+          goNext()
+        }}
         onError={(_rejections) => {}}
       />
     </div>
