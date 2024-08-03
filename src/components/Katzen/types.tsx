@@ -26,11 +26,14 @@ export type KatzenComponent = <const Columns extends readonly Column[]>(props: {
   renderColumnsMapping?: ({ mappings }: { mappings: ColumnsMappingRow<Columns>[] }) => React.JSX.Element
 }) => React.JSX.Element
 
-interface UploadInfoRow {
-  title: string
-  tooltip?: string
-  required?: boolean
-}
+type UploadInfoRow =
+  // <Columns extends readonly Column[]>
+  {
+    id: string
+    name: string
+    description?: string
+    isRequired?: boolean
+  }
 
 interface ColumnsMappingRow<Columns extends readonly Column[]> {
   fileColumn: string
